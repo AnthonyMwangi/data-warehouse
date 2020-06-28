@@ -1,0 +1,2 @@
+(this["webpackJsonpdata-warehouse"]=this["webpackJsonpdata-warehouse"]||[]).push([[6],{23:function(a,e,s){a.exports=s.p+"static/media/search-feature-bg.6c46cd7d.svg"}}]);
+//# sourceMappingURL=6.040d24e2.chunk.js.map
