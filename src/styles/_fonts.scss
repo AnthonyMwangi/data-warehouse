@@ -1,0 +1,23 @@
+@mixin font-face($font-name, $file-name, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: $font-name;
+    src: url("#{$file-name}.eot");
+    src: url("#{$file-name}.eot?#iefix") format("embedded-opentype"),
+         url("#{$file-name}.woff2") format("woff2"),
+         url("#{$file-name}.woff") format("woff"),
+         url("#{$file-name}.ttf") format("truetype"),
+         url("#{$file-name}.svg#lineto-#{$file-name}") format("svg");
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@include font-face('Avenir-Pro', '//db.onlinewebfonts.com/t/4f23e5adf44a99020e63cd8ea791046e', 400);
+
+@include font-face("Avenir-Pro", "//db.onlinewebfonts.com/t/2090551770be22b09600a40b0b4673b7", 500);
+
+@include font-face("Avenir-Pro", "//db.onlinewebfonts.com/t/be4f3c3ef80fa971eb8023e5294e5c6c", 600);
+
+@include font-face("Avenir-Pro", "//db.onlinewebfonts.com/t/e5c490a944bc2b2746f0c851501e46c7", 700);
+
+@include font-face("Avenir-Pro", "//db.onlinewebfonts.com/t/5d4d6e4ae012924f051b62496ad32ca2", 800);

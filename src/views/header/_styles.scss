@@ -1,0 +1,77 @@
+#header {
+  background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
+
+  .app-navigation {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+
+    .logo {
+      margin-right: 6rem;
+    }
+
+    .nav {
+      .nav-item {
+        cursor: pointer;
+        margin-right: 2rem;
+        letter-spacing: 0.01rem;
+        &.active { font-weight: 700 }
+        &:hover { color: var(--purple) }
+      }
+    }
+
+    .demo-btn {
+      font-weight: 600;
+      color: var(--dark);
+      padding-top: .85rem;
+      padding-bottom: .85rem;
+      justify-self: flex-end;
+      background-color: var(--white);
+      box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+
+      &:before { opacity: .1 };
+
+    }
+
+  }
+
+  .header-content {
+    height: 28rem;
+    margin-top: 5rem;
+    position: relative;
+
+    &::after {
+      bottom: 0;
+      z-index: 1;
+      content: '';
+      right: -7rem;
+      display: block;
+      width: 44.25rem;
+      height: 23.4rem;
+      position: absolute;
+      background: url(../../images/header-image.svg);
+    }
+
+    .header-title {
+      z-index: 5;
+      width: 100%;
+      line-height: 1.1;
+      font-size: 4rem;
+      font-weight: 700;
+      position: relative;
+      max-width: 32.25rem;
+    }
+
+    .header-caption {
+      font-weight: 500;
+      font-size: .9rem;
+      line-height: 1.6;
+      max-width: 19rem;
+      position: relative;
+      margin-top: 1.85rem;
+      margin-bottom: 2rem;
+    }
+
+  }
+
+}
