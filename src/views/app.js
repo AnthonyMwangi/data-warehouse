@@ -2,6 +2,8 @@ import React from 'react'
 import Header from './header'
 import AboutSection from './about'
 import FeaturesSection from './features'
+import Testimonials from './testimonials'
+import FooterSection from './footer'
 
 export default function app() {
   return (
@@ -12,6 +14,10 @@ export default function app() {
       <AboutSection/>
 
       <FeaturesSection/>
+
+      <Testimonials/>
+
+      <FooterSection/>
 
     </div>
   )

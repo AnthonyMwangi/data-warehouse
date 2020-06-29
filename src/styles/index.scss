@@ -61,7 +61,7 @@ input, select, textarea, button {
   width: 100%;
   min-height: 100vh;
 
-  * { z-index: 2 }
+  * { z-index: 5 }
 
   .avatar, .logo {
     @extend .noselect;

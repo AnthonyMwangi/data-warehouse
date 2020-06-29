@@ -27,7 +27,7 @@
       padding-bottom: .85rem;
       justify-self: flex-end;
       background-color: var(--white);
-      box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+      box-shadow: var(--shadow);
 
       &:before { opacity: .1 };
 
