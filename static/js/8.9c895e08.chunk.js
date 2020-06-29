@@ -1,2 +1,0 @@
-(this["webpackJsonpdata-warehouse"]=this["webpackJsonpdata-warehouse"]||[]).push([[8],{19:function(a,e,s){a.exports=s.p+"static/media/access-feature-ic.6247b3d8.png"}}]);
-//# sourceMappingURL=8.9c895e08.chunk.js.map
