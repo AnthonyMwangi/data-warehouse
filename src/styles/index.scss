@@ -60,6 +60,7 @@ input, select, textarea, button {
 .App {
   width: 100%;
   min-height: 100vh;
+  background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
 
   * { z-index: 5 }
 
@@ -85,6 +86,7 @@ input, select, textarea, button {
   }
 
   .btn {
+    @extend .noselect;
     display: flex;
     line-height: 1;
     cursor: pointer;
@@ -129,5 +131,14 @@ input, select, textarea, button {
 
 @media all and (min-device-width: 320px) and (max-device-width: 720px) {
 
+  .App {
+
+    .app-section {
+      padding: .75rem;
+      //z-index: -1;
+      //position: relative;
+    }
+
+  }
 
 }

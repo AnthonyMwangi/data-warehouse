@@ -68,13 +68,14 @@ function Feature(props) {
     load_image(name, 'ic', 'png').then(a => update_ic(a));
   }, [name]);
 
-  const styles = {
-    backgroundImage: `url(${bg_url})`,
-    backgroundColor: color
-  }
+  const bg_image = { backgroundImage: `url(${bg_url})` };
+
+  const bg_color = { backgroundColor: color };
 
   return (
-    <div className='feature' style={styles}>
+    <div className='feature' style={bg_image}>
+
+      <div className="bg-color" style={bg_color}/>
 
       <div className="img-wrapper">
         <img src={ic_url} alt={`${name}-feature-img`} className="feature-img" />

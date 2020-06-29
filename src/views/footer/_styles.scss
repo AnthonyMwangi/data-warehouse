@@ -1,5 +1,4 @@
 #footer {
-  background: var(--border);
   border-top: 2px solid transparent;
   border-color: transparentize(#9C69E2,0.7);
 
@@ -30,8 +29,16 @@
       display: flex;
       align-items: center;
       .btn-more {
-        background: var(--pink);
+        font-weight: 600;
+        color: var(--pink);
         margin-right: 1.5rem;
+        background: transparent;
+        border: 1.5px solid var(--pink);
+        &:hover {
+          color: var(--white);
+          background: var(--pink);
+        }
+        &::before { opacity: 0 }
       }
       .btn-icon {
         filter: brightness(0) invert(1)
@@ -159,12 +166,125 @@
         align-items: center;
         color: var(--purple);
         justify-content: center;
+        background: darken(#EFEFEF,0);
         transition: all .3s ease-in-out;
         .icon { height: 1.5rem }
         &:hover {
           color: var(--white);
           background: var(--purple);
         }
+      }
+
+    }
+
+  }
+
+}
+
+
+@media all and (min-device-width: 320px) and (max-device-width: 720px) {
+
+  #footer {
+    padding: 1rem 0;
+    border-top: none;
+
+    .demo-section {
+      gap: 1rem;
+      padding: .5rem 1rem;
+      padding-bottom: 2.0rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+
+      .title {
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+
+      .caption {
+        font-size: .8rem;
+        margin-top: .25rem;
+      }
+
+      .btn-wrapper {
+        flex-direction: column;
+        .btn { width: 100% }
+        .btn-more { margin: 0 }
+        .btn-demo { margin-top: 1rem }
+      }
+
+    }
+
+    .main-footer {
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto);
+      border-top: 2px solid transparent;
+      border-color: transparentize(#9C69E2,0.7);
+
+      .footer-section {
+
+        &.brand-info { width: 100% }
+
+        &.nav-links { min-width: 100% }
+
+        .logo-mark { margin-bottom: 1rem }
+
+        .contacts {
+          font-size: .9rem;
+          color: darken(#8A56DB,1);
+          a { margin-bottom: .5rem }
+        }
+
+        .nav-list-title {
+          font-weight: 700;
+          margin-bottom: 1rem;
+        }
+
+        .nav-list-link{
+          font-size: .8rem;
+          padding: 0.35rem 0;
+          margin-bottom: .15rem;
+        }
+
+        .nav-social-links {
+          gap: 1rem;
+          grid-template-rows: auto;
+          grid-template-columns: repeat(4,max-content);
+        }
+
+        &.legal-section {
+          align-items: flex-start;
+          flex-direction: column-reverse;
+        }
+
+        .copyright {
+          width: 100%;
+          margin-bottom: .25rem;
+        }
+
+        .chat-bubble {
+          right: 1rem;
+          bottom: 1rem;
+          position: fixed;
+          width: 3rem;
+          height: 3rem;
+          display: flex;
+          cursor: pointer;
+          font-size: 1.5rem;
+          border-radius: 50%;
+          align-items: center;
+          color: var(--purple);
+          justify-content: center;
+          background: darken(#EFEFEF,0);
+          transition: all .3s ease-in-out;
+          .icon { height: 1.5rem }
+          &:hover {
+            color: var(--white);
+            background: var(--purple);
+          }
+        }
+
       }
 
     }

@@ -157,3 +157,84 @@
   }
 
 }
+
+@media all and (min-device-width: 320px) and (max-device-width: 720px) {
+
+  #testimonials {
+    padding: 0;
+    margin-top: 1rem;
+
+    .section-wrapper {
+      width: 100%;
+      padding: 0rem;
+      padding-top: 1.25rem;
+      padding-bottom: 1rem;
+
+      &::before {
+        width: 100%;
+        border-radius: 0;
+      }
+
+    }
+
+    .section-title {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.01rem;
+    }
+
+    #feedback-grid {
+      height: 17rem;
+      margin: 1rem 0;
+      padding-left: 1rem;
+      z-index: 1;
+      position: relative;
+
+      .flickity-viewport, .flickity-slider {
+        z-index: 1;
+        position: relative;
+      }
+
+      .flickity-page-dots {
+        left: 1rem;
+        height: 1.5rem;
+        .dot {
+          width: .45rem;
+          height: .45rem;
+          margin-right: .45rem;
+        }
+      }
+
+      .flickity-button {
+        display: none;
+      }
+
+    }
+
+    .testimonial {
+      gap: .5rem;
+      z-index: -1 !important;
+      position: relative;
+      padding: 1.25rem 1rem;
+      width: calc(100% - 1rem);
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+
+      &.spacer { display: none }
+
+      .avatar {
+        width: 2.25rem;
+        height: 2.25rem;
+      }
+
+      .comment {
+        font-size: .75rem;
+      }
+
+    }
+
+  }
+
+}

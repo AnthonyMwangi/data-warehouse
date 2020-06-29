@@ -1,0 +1,133 @@
+.app-navigation {
+  width: 100%;
+  padding-top: 2rem;
+  z-index: 100 !important;
+
+  .app-navigation-wrapper {
+    width: 100%;
+    display: grid;
+    margin: auto;
+    max-width: 56rem;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+  }
+
+  .logo {
+    margin-right: 6rem;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav {
+    .nav-item {
+      cursor: pointer;
+      margin-right: 2rem;
+      letter-spacing: 0.01rem;
+      &.active { font-weight: 700 }
+      &:hover { color: var(--purple) }
+    }
+  }
+
+  .demo-btn {
+    font-weight: 600;
+    color: var(--dark);
+    padding-top: .85rem;
+    padding-bottom: .85rem;
+    justify-self: flex-end;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+
+    &:before { opacity: .1 };
+
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+}
+
+@media all and (min-device-width: 320px) and (max-device-width: 720px) {
+
+  .app-navigation {
+    width: 100%;
+    padding: 0rem;
+    height: 3.75rem;
+    position: relative;
+
+    .app-navigation-wrapper {
+      left: 0;
+      width: 100%;
+      display: grid;
+      height: 3.75rem;
+      position: fixed;
+      padding: 0 1rem;
+      align-items: center;
+      grid-template-columns: 1fr auto;
+      &.show-bg {
+        background: var(--white);
+        border-bottom: 1px solid #EFEFEF;
+      }
+    }
+
+    .nav-wrapper {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      top: 3.75rem;
+      padding: 1rem;
+      position: fixed;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--white);
+
+      &.menu-hidden{ display: none }
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .nav-item {
+        width: 9rem;
+        cursor: pointer;
+        margin: .55rem 0;
+        text-align: center;
+        padding: .5rem 1rem;
+        border-radius: 2.5rem;
+        &:hover { font-weight: 700 }
+      }
+    }
+
+    .demo-btn {
+      box-shadow: none;
+      margin-top: .7rem;
+      color: var(--white);
+      background-color: var(--purple);
+      .btn-icon { filter: brightness(0) invert(1) }
+    }
+
+    .menu-button {
+      display: flex;
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: 1rem;
+      border-radius: 50%;
+      align-items: center;
+      color: var(--purple);
+      justify-content: center;
+      background: darken(#EFEFEF,0);
+      &.menu-visible {
+        color: var(--white);
+        background: var(--purple)
+      }
+    }
+
+  }
+
+}

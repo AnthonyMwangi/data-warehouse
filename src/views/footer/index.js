@@ -38,7 +38,7 @@ export default function footer() {
 
             <div className="content">
               <div className="copyright">© Datawarehouse™, 2020. All rights reserved.</div>
-              <div className="copyright">Company Registration Number: 21479524.</div>
+              <div className="copyright">Company Registration: 21479524.</div>
             </div>
 
             <button className="chat-bubble">
@@ -56,7 +56,7 @@ export default function footer() {
 
 function DemoFooter() {
   return (
-    <div className="demo-section">
+    <div id='signup' className="demo-section">
 
       <div className="text-wrapper">
         <div className="title">Try for free!</div>
@@ -108,7 +108,7 @@ function BrandInformation() {
 
 function NavigationLinks({ title = 'Nav List', items = [] }) {
   return (
-    <div className="footer-section nav-links">
+    <div className="footer-section nav-links noselect">
 
       <div className="nav-list-title">{title}</div>
 

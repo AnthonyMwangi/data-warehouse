@@ -9,7 +9,7 @@ export default class Testimonials extends React.Component {
     super(props);
     this.options = {
       draggable: true,
-      autoPlay: false,
+      autoPlay: true,
       freeScroll: true,
       prevNextButtons: true,
       pageDots: true,
@@ -66,7 +66,7 @@ export default class Testimonials extends React.Component {
   render() {
 
     return (
-      <div id='testimonials' className='app-section'>
+      <div id='testimonials' className='app-section noselect'>
 
         <div className="section-wrapper">
 
@@ -84,7 +84,6 @@ export default class Testimonials extends React.Component {
   }
 
 }
-
 
 function Testimonial({ data }) {
 
