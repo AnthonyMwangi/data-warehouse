@@ -12,9 +12,18 @@
     grid-template-columns: auto 1fr;
   }
 
-  .logo {
+  .logo-link {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
     margin-right: 6rem;
+    align-items: center;
+    .logo {
+      width: 2.5rem;
+      padding: .05rem 0;
+    }
   }
+
 
   .nav-wrapper {
     display: flex;

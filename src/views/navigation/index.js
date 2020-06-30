@@ -21,13 +21,9 @@ export default class Navigation extends React.Component {
     }
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.scroll_handler);
-  }
+  componentDidMount = () => window.addEventListener('scroll', this.scroll_handler);
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.scroll_handler);
-  }
+  componentWillUnmount = () => window.removeEventListener('scroll', this.scroll_handler);
 
   scroll_handler = () => {
 
@@ -58,7 +54,9 @@ export default class Navigation extends React.Component {
 
         <div className={`app-navigation-wrapper ${view_mode}`}>
 
-          <img src={logo} alt="app-logo" className="logo" />
+          <a href="#navbar" className="logo-link">
+            <img src={logo} alt="app-logo" className="logo" />
+          </a>
 
           <div className={`nav-wrapper ${visibility}`}>
 

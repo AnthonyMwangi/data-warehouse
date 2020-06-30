@@ -185,12 +185,12 @@
 @media all and (min-device-width: 320px) and (max-device-width: 720px) {
 
   #footer {
-    padding: 1rem 0;
+    padding:0;
     border-top: none;
 
     .demo-section {
       gap: 1rem;
-      padding: .5rem 1rem;
+      padding: 1.5rem 1rem;
       padding-bottom: 2.0rem;
       grid-template-columns: 1fr;
       grid-template-rows: auto auto;
