@@ -101,15 +101,15 @@ function Testimonial({ data }) {
 
       const url = `https://randomuser.me/api/?inc=picture,name,email&noinfo&results=${1}`;
 
-      const results = await fetch(url).then(a => a?.results[0] ?? {}).catch(() => ({}));
+      const response = await fetch(url).then(a => a.json()).catch(() => ({results: []}));
 
-      const { name, email, picture } = results;
+      const { name, email, picture } = response?.results[0] ?? {};
 
-      if (!!results.name) update_name(`${name.title} ${name.first} ${name.last}`);
+      if (!!name) update_name(`${name.title} ${name.first} ${name.last}`);
 
-      if (!!results.picture) update_avatar(picture.medium);
+      if (!!picture) update_avatar(picture.medium);
 
-      if (!!results.email) update_link(email);
+      if (!!email) update_link(email);
 
     }
 

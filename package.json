@@ -37,5 +37,6 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "https://randomuser.me",
   "homepage": "https://anthonymwangi.github.io/data-warehouse"
 }
